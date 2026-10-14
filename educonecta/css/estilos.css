@@ -1,0 +1,482 @@
+
+/* ==========================================================================
+   EDUCONECTA - DISEÑO IMPACTANTE & GLASSMORPHISM PREMIUM (ESMERALDA)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    /* Paleta de Fondos e Iluminación */
+    --bg-mesh: radial-gradient(at 0% 0%, rgba(167, 243, 208, 0.35) 0px, transparent 50%),
+               radial-gradient(at 100% 100%, rgba(5, 150, 105, 0.15) 0px, transparent 50%),
+               #f0fdf4;
+    --surface-glass: rgba(255, 255, 255, 0.82);
+    --surface-card: #ffffff;
+    --border-glass: rgba(167, 243, 208, 0.6);
+    --border-hover: #10b981;
+
+    /* Verdes Neón / Esmeralda */
+    --green-primary: #059669;
+    --green-hover: #047857;
+    --green-dark: #022c22;
+    --green-neon: #10b981;
+    --green-light-bg: #ecfdf5;
+    --glow-emerald: rgba(16, 185, 129, 0.3);
+
+    /* Textos */
+    --text-title: #022c22;
+    --text-body: #334155;
+    --text-muted: #64748b;
+
+    /* Categorías Vibrantes */
+    --tag-sociales: #d97706;
+    --tag-sociales-bg: #fffbebf5;
+    --tag-filosofia: #8b5cf6;
+    --tag-filosofia-bg: #f5f3fff5;
+    --tag-biologia: #059669;
+    --tag-biologia-bg: #ecfdf5f5;
+
+    /* Geometría y Animaciones */
+    --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --radius-xl: 24px;
+    --radius-lg: 16px;
+    --radius-pill: 50px;
+
+    --shadow-soft: 0 10px 30px -5px rgba(2, 44, 34, 0.05);
+    --shadow-glass: 0 20px 40px -15px rgba(5, 150, 105, 0.12);
+    --shadow-hover: 0 25px 50px -12px rgba(5, 150, 105, 0.25);
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--bg-mesh);
+    background-attachment: fixed;
+    color: var(--text-body);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   1. ENCABEZADO IMPACTANTE CON DEGRADADO NEÓN
+   ========================================================================== */
+.header {
+    background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #059669 100%);
+    padding: 2.2rem 1.5rem;
+    color: #ffffff;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(2, 44, 34, 0.25);
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #34d399, #10b981, #6ee7b7, #059669);
+    background-size: 200% 100%;
+    animation: gradientMove 4s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo-img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    background: none;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 10px;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.logo-img:hover {
+    transform: translateY(-3px) rotate(-3deg) scale(1.05);
+    border-color: #6ee7b7;
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3);
+}
+
+.header-texto h1 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    letter-spacing: -0.8px;
+    background: linear-gradient(to right, #ffffff, #a7f3d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.badge-live {
+    font-size: 0.7rem;
+    background: #34d399;
+    color: var(--green-dark);
+    font-weight: 800;
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-pill);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    box-shadow: 0 0 15px rgba(52, 211, 153, 0.5);
+}
+
+.header-texto p {
+    font-size: 0.98rem;
+    color: #a7f3d0;
+    font-weight: 500;
+    margin-top: 0.2rem;
+}
+
+/* ==========================================================================
+   2. BARRA DE NAVEGACIÓN DE CRISTAL (GLASSMORPHISM)
+   ========================================================================== */
+.navegacion {
+    background: var(--surface-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-glass);
+    box-shadow: var(--shadow-soft);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0.85rem 1rem;
+}
+
+.btn-filtro {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1.5px solid var(--border-glass);
+    color: var(--text-muted);
+    padding: 0.7rem 1.5rem;
+    font-size: 0.92rem;
+    font-weight: 700;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.btn-filtro:hover {
+    color: var(--green-primary);
+    border-color: var(--green-neon);
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(16, 185, 129, 0.15);
+}
+
+.btn-filtro.active {
+    background: linear-gradient(135deg, var(--green-primary), var(--green-neon));
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
+}
+
+/* ==========================================================================
+   3. BANNER HERO DE BIENVENIDA
+   ========================================================================== */
+.main-container {
+    max-width: 1200px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero-banner {
+    background: linear-gradient(135deg, rgba(236, 253, 245, 0.9) 0%, rgba(209, 250, 229, 0.9) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(167, 243, 208, 0.8);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-glass);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner::after {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -5%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-title);
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.5px;
+}
+
+.hero-content p {
+    color: var(--text-body);
+    font-size: 1.02rem;
+    max-width: 880px;
+}
+
+/* ==========================================================================
+   4. BUSCADOR ESTILO NEÓN
+   ========================================================================== */
+.buscador-section {
+    margin-bottom: 3rem;
+}
+
+.input-container {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#input-buscador {
+    width: 100%;
+    padding: 1.2rem 1.5rem 1.2rem 3.5rem;
+    font-size: 1.05rem;
+    font-family: var(--font);
+    background: #ffffff;
+    border: 2px solid var(--border-glass);
+    border-radius: var(--radius-pill);
+    color: var(--text-title);
+    outline: none;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+#input-buscador::placeholder {
+    color: #a0aec0;
+}
+
+#input-buscador:focus {
+    border-color: var(--green-neon);
+    box-shadow: 0 0 0 6px var(--glow-emerald), 0 10px 25px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   5. CATÁLOGO & TARJETAS EN EFECTO 3D
+   ========================================================================== */
+.catalogo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-glass);
+    padding-bottom: 1rem;
+}
+
+.catalogo-header h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-title);
+    letter-spacing: -0.5px;
+}
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+    gap: 2.2rem;
+}
+
+/* TARJETA CON EFECTO ELEVACIÓN 3D */
+.card-libro {
+    background: var(--surface-card);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--border-glass);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-glass);
+    transition: var(--transition);
+    animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card-libro:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--green-neon);
+    box-shadow: var(--shadow-hover);
+}
+
+.portada-container {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e6f4ed, #d1fae5);
+}
+
+.portada-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-libro:hover .portada-img {
+    transform: scale(1.1);
+}
+
+.card-contenido {
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* BADGES FLOTANTES */
+.badge {
+    align-self: flex-start;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 0.35rem 0.9rem;
+    border-radius: var(--radius-pill);
+    margin-bottom: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.badge.sociales { background: var(--tag-sociales-bg); color: var(--tag-sociales); border: 1px solid #fde68a; }
+.badge.filosofia { background: var(--tag-filosofia-bg); color: var(--tag-filosofia); border: 1px solid #e9d5ff; }
+.badge.biologia { background: var(--tag-biologia-bg); color: var(--tag-biologia); border: 1px solid #a7f3d0; }
+
+.card-contenido h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-title);
+    margin-bottom: 0.35rem;
+    line-height: 1.3;
+}
+
+.card-contenido .autor {
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 0.9rem;
+}
+
+.card-contenido .descripcion {
+    font-size: 0.92rem;
+    color: var(--text-body);
+    margin-bottom: 1.6rem;
+    flex-grow: 1;
+}
+
+/* BOTONES DE ACCIÓN DE ALTO IMPACTO */
+.card-acciones {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: var(--radius-lg);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-leer {
+    background: linear-gradient(135deg, var(--green-primary), var(--green-hover));
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+}
+
+.btn-leer:hover {
+    background: linear-gradient(135deg, var(--green-hover), var(--green-dark));
+    box-shadow: 0 8px 20px rgba(5, 150, 105, 0.45);
+    transform: translateY(-2px);
+}
+
+.btn-descargar {
+    background: var(--green-light-bg);
+    color: var(--green-dark);
+    border: 1.5px solid var(--border-glass);
+}
+
+.btn-descargar:hover {
+    background: #d1fae5;
+    border-color: var(--green-neon);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   6. PIE DE PÁGINA INSTITUCIONAL
+   ========================================================================== */
+.footer {
+    background: var(--green-dark);
+    text-align: center;
+    padding: 3.5rem 1.5rem;
+    margin-top: 5rem;
+    color: #a7f3d0;
+    font-size: 0.92rem;
+    position: relative;
+    border-top: 4px solid var(--green-neon);
+}
+
+.footer p:first-child {
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header-container { flex-direction: column; text-align: center; gap: 1.2rem; }
+    .logo-area { flex-direction: column; }
+    .nav-container { flex-direction: column; }
+    .btn-filtro { width: 100%; justify-content: center; }
+    .catalogo-grid { grid-template-columns: 1fr; }
+}

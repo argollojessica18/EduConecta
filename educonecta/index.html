@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConecta | Biblioteca Digital Liceo Oruro</title>
+    <link rel="stylesheet" href="css/estilos.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="img/logo.png/logoLO.png" alt="Insignia Liceo Nacional Oruro" class="logo-img">
+                <div class="header-texto">
+                    <h1>EduConecta <span class="badge-live">Online</span></h1>
+                    <p>Biblioteca Digital • Liceo Nacional de Señoritas "Oruro"</p>
+                </div>
+            </div>
+            
+            <div class="stats-counter">
+                <div class="stat-item">
+                    <span class="stat-number">REA</span>
+                    <span class="stat-label">Recursos Abiertos</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <nav class="navegacion">
+        <div class="nav-container">
+            <button class="btn-filtro active" data-categoria="todos">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                Todos
+            </button>
+            <button class="btn-filtro" data-categoria="sociales">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
+                Ciencias Sociales
+            </button>
+            <button class="btn-filtro" data-categoria="filosofia">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/><path d="M9 21h6"/></svg>
+                Filosofía
+            </button>
+            <button class="btn-filtro" data-categoria="biologia">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.18 2 8 0 5.5-4.7 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                Biología
+            </button>
+        </div>
+    </nav>
+
+   
+    <main class="main-container">
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h2>Explora tus textos de aprendizaje de forma gratuita</h2>
+                <p>Acceso directo sin consumo de datos excesivo a textos escolares y material bibliográfico para estudiantes.</p>
+            </div>
+        </section>
+
+        
+        <section class="buscador-section">
+            <div class="input-container">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <input type="text" id="input-buscador" placeholder="¿Qué libro o materia estás buscando hoy?...">
+            </div>
+        </section>
+
+        <section class="catalogo-section">
+            <div class="catalogo-header">
+                <h2 id="titulo-seccion">Catálogo Bibliográfico</h2>
+                <span class="counter-badge" id="counter-badge">libros disponibles</span>
+            </div>
+            
+            <div class="catalogo-grid" id="catalogo-grid">
+                
+               
+              
+
+                <article class="card-libro" data-categoria="sociales">
+                    <div class="portada-container">
+                        <img src="img/portadas/sociales/sociales4to.jpg" alt="Portada Texto 5to Sociales" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge sociales">Ciencias Sociales</span>
+                        <h3>Texto de Aprendizaje 5° Sec.</h3>
+                        <p class="autor">MINEDU Bolivia • Nivel Secundario</p>
+                        <p class="descripcion">Texto oficial de aprendizaje del Ministerio de Educación para quinto de secundaria.</p>
+                        <div class="card-acciones">
+                            <a href="libros/sociales/sociales_5to.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/sociales/sociales_5to.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="card-libro" data-categoria="sociales">
+                    <div class="portada-container">
+                        <img src="img/portadas/sociales/constitucion.jpg" alt="Portada Constitución Política del Estado" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge sociales">Ciencias Sociales</span>
+                        <h3>Constitución Política del Estado</h3>
+                        <p class="autor">Gaceta Oficial • Marco Legal</p>
+                        <p class="descripcion">Texto constitucional oficial para el estudio de cívica, derechos y deberes ciudadanos.</p>
+                        <div class="card-acciones">
+                            <a href="libros/sociales/constitucion_politica_del_estado.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/sociales/constitucion_politica_del_estado.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="sociales">
+                    <div class="portada-container">
+                        <img src="img/portadas/sociales/historia_oruro.jpg" alt="Portada Historia de Oruro" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge sociales">Ciencias Sociales</span>
+                        <h3>Historia de Oruro para Secundaria</h3>
+                        <p class="autor">Compendio Regional • Historia Local</p>
+                        <p class="descripcion">Reseña histórica sobre la fundación, revolución y desarrollo minero de Oruro.</p>
+                        <div class="card-acciones">
+                            <a href="libros/sociales/historia_oruro.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/sociales/historia_oruro.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="card-libro" data-categoria="sociales">
+                    <div class="portada-container">
+                        <img src="img/portadas/sociales/geografia_bolivia.jpg" alt="Portada Atlas Geográfico de Bolivia" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge sociales">Ciencias Sociales</span>
+                        <h3>Atlas Geográfico de Bolivia</h3>
+                        <p class="autor">Educa Bolivia • Geografía</p>
+                        <p class="descripcion">Compendio sobre geografía física, política, división territorial y recursos naturales.</p>
+                        <div class="card-acciones">
+                            <a href="libros/sociales/geografia_bolivia.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/sociales/geografia_bolivia.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="sociales">
+                    <div class="portada-container">
+                        <img src="img/portadas/sociales/patrimonio_oruro.jpg" alt="Portada Patrimonio y Folclore de Oruro" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge sociales">Ciencias Sociales</span>
+                        <h3>Patrimonio y Folclore de Oruro</h3>
+                        <p class="autor">Investigación Regional • Cultura</p>
+                        <p class="descripcion">Estudio sobre el Carnaval de Oruro, expresiones dancísticas y riqueza patrimonial.</p>
+                        <div class="card-acciones">
+                            <a href="libros/sociales/patrimonio_oruro.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/sociales/patrimonio_oruro.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="sociales">
+                    <div class="portada-container">
+                        <img src="img/portadas/sociales/historia_bolivia.jpg" alt="Portada Historia General de Bolivia" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge sociales">Ciencias Sociales</span>
+                        <h3>Historia General de Bolivia</h3>
+                        <p class="autor">Editorial Educación • Nivel Secundario</p>
+                        <p class="descripcion">Texto oficial de consulta sobre los procesos históricos, culturales y sociales del Estado Plurinacional.</p>
+                        <div class="card-acciones">
+                            <a href="libros/sociales/Historia_bolivia.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/sociales/Historia_bolivia.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- FILOSOFÍA (10 LIBROS) -->
+                <article class="card-libro" data-categoria="filosofia">
+                    <div class="portada-container">
+                        <img src="img/portadas/filosofia/filosofia4to.jpg" alt="Portada Filosofía y Psicología 4to" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge filosofia">Filosofía</span>
+                        <h3>Filosofía y Psicología 4° Sec.</h3>
+                        <p class="autor">MINEDU Bolivia • Nivel Secundario</p>
+                        <p class="descripcion">Texto oficial de aprendizaje sobre introducción a la filosofía y procesos psicológicos.</p>
+                        <div class="card-acciones">
+                            <a href="libros/filosofia/filosofia_4to.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/filosofia/filosofia_4to.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="filosofia">
+                    <div class="portada-container">
+                        <img src="img/portadas/filosofia/filosofia5to.png" alt="Portada Filosofía y Lógica 5to" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge filosofia">Filosofía</span>
+                        <h3>Filosofía y Lógica 5° Sec.</h3>
+                        <p class="autor">MINEDU Bolivia • Nivel Secundario</p>
+                        <p class="descripcion">Módulo sobre lógica formal, tablas de verdad y estructuras del pensamiento lógico.</p>
+                        <div class="card-acciones">
+                            <a href="libros/filosofia/filosofia_5to.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/filosofia/filosofia_5to.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="filosofia">
+                    <div class="portada-container">
+                        <img src="img/portadas/filosofia/filosofia6to.jpg" alt="Portada Cosmovisiones y Ética 6to" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge filosofia">Filosofía</span>
+                        <h3>Cosmovisiones y Ética 6° Sec.</h3>
+                        <p class="autor">MINEDU Bolivia • Nivel Secundario</p>
+                        <p class="descripcion">Texto oficial sobre ética, bioética y cosmovisiones filosóficas contemporáneas.</p>
+                        <div class="card-acciones">
+                            <a href="libros/filosofia/filosofia_6to.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/filosofia/filosofia_6to.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="filosofia">
+                    <div class="portada-container">
+                        <img src="img/portadas/filosofia/la_republica.jpg" alt="Portada La República de Platón" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge filosofia">Filosofía</span>
+                        <h3>La República</h3>
+                        <p class="autor">Platón • Obras Clásicas</p>
+                        <p class="descripcion">Diálogo filosófico fundamental sobre la justicia, el Estado ideal y la alegoría de la caverna.</p>
+                        <div class="card-acciones">
+                            <a href="libros/filosofia/platon_republica.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/filosofia/platon_republica.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="filosofia">
+                    <div class="portada-container">
+                        <img src="img/portadas/filosofia/Socrates.jpg" alt="Portada Apología de Sócrates" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge filosofia">Filosofía</span>
+                        <h3>Apología de Sócrates</h3>
+                        <p class="autor">Platón • Obras Clásicas</p>
+                        <p class="descripcion">Obra clásica sobre la defensa de Sócrates en su juicio y la búsqueda de la verdad.</p>
+                        <div class="card-acciones">
+                            <a href="libros/filosofia/apologia_platon.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/filosofia/apologia_platon.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="filosofia">
+                    <div class="portada-container">
+                        <img src="img/portadas/filosofia/etica.jpg" alt="Portada Ética a Nicómaco" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge filosofia">Filosofía</span>
+                        <h3>Ética a Nicómaco</h3>
+                        <p class="autor">Aristóteles • Obras Clásicas</p>
+                        <p class="descripcion">Tratado filosófico sobre la virtud, el comportamiento moral y el concepto de felicidad.</p>
+                        <div class="card-acciones">
+                            <a href="libros/filosofia/etica_Aristoteles.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/filosofia/etica_Aristoteles.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="filosofia">
+                    <div class="portada-container">
+                        <img src="img/portadas/filosofia/discurso_metodo.jpg" alt="Portada Discurso del Método" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge filosofia">Filosofía</span>
+                        <h3>Discurso del Método</h3>
+                        <p class="autor">René Descartes • Pensamiento Crítico</p>
+                        <p class="descripcion">Obra clave del racionalismo moderno sobre la duda metódica y el conocimiento.</p>
+                        <div class="card-acciones">
+                            <a href="libros/filosofia/descartes_metodo.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/filosofia/descartes_metodo.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="filosofia">
+                    <div class="portada-container">
+                        <img src="img/portadas/filosofia/entendimiento.jpg" alt="Portada Ensayo sobre el Entendimiento Humano" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge filosofia">Filosofía</span>
+                        <h3>Ensayo sobre el Entendimiento Humano</h3>
+                        <p class="autor">John Locke • Pensamiento Crítico</p>
+                        <p class="descripcion">Fundamentos del empirismo sobre el origen y límites de las ideas y la experiencia.</p>
+                        <div class="card-acciones">
+                            <a href="libros/filosofia/locke_entendimiento.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/filosofia/locke_entendimiento.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="filosofia">
+                    <div class="portada-container">
+                        <img src="img/portadas/filosofia/cosmovision.jpg" alt="Portada Cosmovisiones Andinas y Amazónicas" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge filosofia">Filosofía</span>
+                        <h3>Cosmovisiones Andinas y Amazónicas</h3>
+                        <p class="autor">Pensamiento Indígena • Filosofía Regional</p>
+                        <p class="descripcion">Estudio comparativo sobre la filosofía, principios y visión del mundo originario.</p>
+                        <div class="card-acciones">
+                            <a href="libros/filosofia/cosmovisiones_andinas.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/filosofia/cosmovisiones_andinas.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- BIOLOGÍA -->
+                
+                <article class="card-libro" data-categoria="biologia">
+                    <div class="portada-container">
+                        <img src="img/portadas/biologia/atlas.jpg" alt="Portada Atlas Ilustrado del Cuerpo Humano" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge biologia">Biología</span>
+                        <h3>Cuerpo Humano Atlas Visual</h3>
+                        <p class="autor"></p>
+                        <p class="descripcion">Guía anatómica detallada con diagramas de los sistemas y órganos del cuerpo humano.</p>
+                        <div class="card-acciones">
+                            <a href="libros/biologia/anatomia_humana.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/biologia/anatomia_humana.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="biologia">
+                    <div class="portada-container">
+                        <img src="img/portadas/biologia/biologia_celular.jpg" alt="Portada Biología Celular y Molecular" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge biologia">Biología</span>
+                        <h3>Biología Celular y Molecular</h3>
+                        <p class="autor">Compendio Escolar • Biología</p>
+                        <p class="descripcion">Guía sobre la estructura de la célula, organelos, ciclo celular y síntesis de ADN.</p>
+                        <div class="card-acciones">
+                            <a href="libros/biologia/biologia_celular.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/biologia/biologia_celular.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="biologia">
+                    <div class="portada-container">
+                        <img src="img/portadas/biologia/and.jpg" alt="Portada Genética y Leyes de Mendel" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge biologia">Biología</span>
+                        <h3>Genética y Leyes de Mendel</h3>
+                        <p class="autor">Guía de Estudio • Biología</p>
+                        <p class="descripcion">Explicación práctica sobre la herencia genética, cuadros de Punnett y variación celular.</p>
+                        <div class="card-acciones">
+                            <a href="libros/biologia/genetica_basica.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/biologia/genetica_basica.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="biologia">
+                    <div class="portada-container">
+                        <img src="img/portadas/biologia/ecologia_altiplano.jpg" alt="Portada Ecología del Altiplano Boliviano" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge biologia">Biología</span>
+                        <h3>Ecología del Altiplano Boliviano</h3>
+                        <p class="autor">Investigación Ambiental • Ecología</p>
+                        <p class="descripcion">Análisis de la biodiversidad, ecosistemas frágiles y adaptación animal en la región andina.</p>
+                        <div class="card-acciones">
+                            <a href="libros/biologia/ecologia_altiplano.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/biologia/ecologia_altiplano.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="biologia">
+                    <div class="portada-container">
+                        <img src="img/portadas/biologia/plantas_medicinales.jpg" alt="Portada Botánica y Plantas Medicinales" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge biologia">Biología</span>
+                        <h3>Botánica y Plantas Medicinales</h3>
+                        <p class="autor">Diomedes Andrés Gómez Paternina <br>
+Ramón Barros Algarra <br>
+Mauricio Sierra Sarmiento
+</p>
+                        <p class="descripcion">Manual sobre morfología vegetal y propiedades de las plantas de uso medicinal.</p>
+                        <div class="card-acciones">
+                            <a href="libros/biologia/botanica_medicinal.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/biologia/botanica_medicinal.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-libro" data-categoria="biologia">
+                    <div class="portada-container">
+                        <img src="img/portadas/biologia/zoologia_general.jpg" alt="Portada Zoología de Vertebrados" class="portada-img">
+                        <div class="overlay-hover">
+                            <span class="preview-tag">Vista Previa</span>
+                        </div>
+                    </div>
+                    <div class="card-contenido">
+                        <span class="badge biologia">Biología</span>
+                        <h3>Zoología de Vertebrados</h3>
+                        <p class="autor">Ernst Hadorn y Rudiger Wehner</p>
+                        <p class="descripcion">Estudio sobre la clasificación, hábitat y características anatómicas de los animales.</p>
+                        <div class="card-acciones">
+                            <a href="libros/biologia/zoologia_general.pdf" target="_blank" class="btn btn-leer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Leer
+                            </a>
+                            <a href="libros/biologia/zoologia_general.pdf" download class="btn btn-descargar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Bajar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+               
+
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 EduConecta • Proyecto BTH en Sistemas Informáticos REALIZADO POR: Argollo Cruz Jessica Alejandra</p>
+            <p>Liceo Nacional de Señoritas "Oruro" • Recursos Educativos Abiertos</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
